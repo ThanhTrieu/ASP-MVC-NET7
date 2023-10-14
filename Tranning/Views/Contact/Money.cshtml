@@ -1,0 +1,21 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    ViewData["Title"] = "Contact page";
+    Layout = "~/Views/Shared/_MainLayout.cshtml";
+}
+<div class="row vh-100">
+    <div class="col-sm-12 col-md-12">
+        <h1> Hello word !</h1>
+        <h2>ID: @ViewData["id"]</h2>
+        <h4>my name : @ViewData["name"]</h4>
+        <h4>my email: @ViewData["email"] </h4>
+        <ul>
+            @for (int i = 0; i < (int)ViewData["id"]; i++)
+            {
+                <li> name : @ViewData["name"] </li>
+            }
+        </ul>
+    </div>
+</div>
