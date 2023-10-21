@@ -3,7 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.7.34024.191
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tranning", "Tranning\Tranning.csproj", "{93F3EB0F-B6A7-4B73-9C0E-B3B803CE0BFD}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Tranning", "Tranning\Tranning.csproj", "{93F3EB0F-B6A7-4B73-9C0E-B3B803CE0BFD}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CodeFirst", "..\..\30 - Application Development\Asp net Core 6 MVC Connect to MS SQL Database Using EF Core Code First Approach\CodeFirst\CodeFirst.csproj", "{7766C15E-173F-4004-B147-6DC136B4F5AF}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,10 @@ Global
 		{93F3EB0F-B6A7-4B73-9C0E-B3B803CE0BFD}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{93F3EB0F-B6A7-4B73-9C0E-B3B803CE0BFD}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{93F3EB0F-B6A7-4B73-9C0E-B3B803CE0BFD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7766C15E-173F-4004-B147-6DC136B4F5AF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7766C15E-173F-4004-B147-6DC136B4F5AF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7766C15E-173F-4004-B147-6DC136B4F5AF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7766C15E-173F-4004-B147-6DC136B4F5AF}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
