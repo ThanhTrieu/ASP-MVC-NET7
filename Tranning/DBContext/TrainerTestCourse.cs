@@ -11,8 +11,7 @@ namespace Tranning.DBContext
 
         [ForeignKey("CategoryId")]
         public int CategoryId { get; set; }
-
-        public virtual IdentityUser Categories  { get; set; }  
+        public TrainerTestCategories TrainerTestCategories { get; set; }  // reference navigation
 
         [Column("NameCourse", TypeName = "Varchar(50)")]
         public string NameCourse { get; set; }
