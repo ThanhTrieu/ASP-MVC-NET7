@@ -1,0 +1,53 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+
+@model Tranning.Models.CategoryModel
+
+@{
+    ViewData["Title"] = "Categories page";
+    // co the code nhu trong controller
+    Layout = "~/Views/Shared/_MainLayout.cshtml";
+}
+<div class="row vh-100">
+    <div class="col-sm-12 col-md-12">
+        <h3 class="display-4">
+            List Categories
+        </h3>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>NAME</th>
+                    <th>ICON</th>
+                    <th>DESCRIPTION</th>
+                    <th>STATUS</th>
+                    <th>CREATED AT</th>
+                    <th>UPDATED AT</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model.CategoryDetailLists)
+                {
+                    <tr>
+                        <td>@item.id</td>
+                        <td>@item.name</td>
+                        <td>
+                            <img src="@item.icon" />
+                        </td>
+                        <td>@item.description</td>
+                        @if(item.status == 1){
+                            <td>Active</td>
+                        } 
+                        else
+                        {
+                            <td>Deactive</td>
+                        }
+                        <td>@item.created_at</td>
+                        <td>@item.updated_at</td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</div>
