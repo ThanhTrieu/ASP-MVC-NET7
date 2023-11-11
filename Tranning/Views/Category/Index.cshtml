@@ -11,9 +11,10 @@
 }
 <div class="row vh-100">
     <div class="col-sm-12 col-md-12">
-        <h3 class="display-4">
+        <h3 class="display-6">
             List Categories
         </h3>
+        <a class="btn btn-primary btn-sm" href="@Url.Action("Add","Category")"> Add Category </a>
         <table class="table">
             <thead>
                 <tr>
@@ -31,18 +32,13 @@
                 {
                     <tr>
                         <td>@item.id</td>
-                        <td>@item.name</td>
+                        <td>@item.name</td>  
                         <td>
                             <img src="@item.icon" />
                         </td>
                         <td>@item.description</td>
-                        @if(item.status == 1){
-                            <td>Active</td>
-                        } 
-                        else
-                        {
-                            <td>Deactive</td>
-                        }
+
+                        <td>@item.status</td>
                         <td>@item.created_at</td>
                         <td>@item.updated_at</td>
                     </tr>

@@ -1341,6 +1341,22 @@
       "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.map"
     },
     {
+      "Id": "E:\\trieut6\\C#\\Tranning\\Tranning\\wwwroot\\uploads\\images\\76b2e573-d22e-4398-810d-e4dc81fd0690-91316705_2826932030767599_4384472391519043584_n.jpg",
+      "PackagePath": "staticwebassets\\uploads\\images\\76b2e573-d22e-4398-810d-e4dc81fd0690-91316705_2826932030767599_4384472391519043584_n.jpg"
+    },
+    {
+      "Id": "E:\\trieut6\\C#\\Tranning\\Tranning\\wwwroot\\uploads\\images\\dbcb2899-1c8d-404a-86c4-630043d2a2d7-2_TZWI.png",
+      "PackagePath": "staticwebassets\\uploads\\images\\dbcb2899-1c8d-404a-86c4-630043d2a2d7-2_TZWI.png"
+    },
+    {
+      "Id": "E:\\trieut6\\C#\\Tranning\\Tranning\\wwwroot\\uploads\\images\\ec50acca-003a-45d8-8aef-d5abd84ee426-1620_1.jpg",
+      "PackagePath": "staticwebassets\\uploads\\images\\ec50acca-003a-45d8-8aef-d5abd84ee426-1620_1.jpg"
+    },
+    {
+      "Id": "E:\\trieut6\\C#\\Tranning\\Tranning\\wwwroot\\uploads\\images\\ed8159dd-4c4a-46a4-8907-542f9cfaa5f4-81587674_109538533910535_5605031401880551424_n.jpg",
+      "PackagePath": "staticwebassets\\uploads\\images\\ed8159dd-4c4a-46a4-8907-542f9cfaa5f4-81587674_109538533910535_5605031401880551424_n.jpg"
+    },
+    {
       "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.Tranning.Microsoft.AspNetCore.StaticWebAssets.props",
       "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
     },

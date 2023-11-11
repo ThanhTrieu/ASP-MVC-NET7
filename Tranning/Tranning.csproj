@@ -21,4 +21,8 @@
     <PackageReference Include="Microsoft.Extensions.Caching.Memory" Version="7.0.0" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="wwwroot\uploads\images\" />
+  </ItemGroup>
+
 </Project>
