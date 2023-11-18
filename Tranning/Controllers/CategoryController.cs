@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using Microsoft.IdentityModel.Tokens;
 using System.Linq.Expressions;
 using Tranning.DataDBContext;
 using Tranning.Models;
@@ -13,12 +14,26 @@ namespace Tranning.Controllers
             _dbContext = context;
         }
 
+        private bool checkUserLogin()
+        {
+            if (string.IsNullOrEmpty(HttpContext.Session.GetString("SessionUsername")))
+            {
+                return false;
+            }
+            return true;
+        }
+
         [HttpGet]
         public IActionResult Index()
         {
+            // check dang nhap
+            //if (!checkUserLogin())
+            //{
+            //    return RedirectToAction(nameof(LoginController.Index), "Login");
+            //}
             CategoryModel categoryModel = new CategoryModel();
             categoryModel.CategoryDetailLists = new List<CategoryDetail>();
-            var data = _dbContext.Categories.ToList();
+            var data = _dbContext.Categories.Where(m => m.deleted_at == null).ToList();
             foreach (var item in data)
             {
                 categoryModel.CategoryDetailLists.Add(new CategoryDetail
@@ -39,6 +54,12 @@ namespace Tranning.Controllers
         [HttpGet]
         public IActionResult Add()
         {
+            // check dang nhap
+            //if (!checkUserLogin())
+            //{
+            //    return RedirectToAction(nameof(LoginController.Index), "Login");
+            //}
+
             CategoryDetail category = new CategoryDetail();
             return View(category);
         }
@@ -61,7 +82,7 @@ namespace Tranning.Controllers
                         created_at = Convert.ToDateTime(DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss"))
                     };
                     _dbContext.Categories.Add(categoryData);
-                    _dbContext.SaveChanges();
+                    _dbContext.SaveChanges(true);
                     TempData["saveStatus"] = true;
                 } 
                 catch
@@ -71,6 +92,85 @@ namespace Tranning.Controllers
                 return RedirectToAction(nameof(CategoryController.Index), "Category");
             }
             return View(category);
+        }
+
+        [HttpGet]
+        public IActionResult Update(int id = 0)
+        {
+            CategoryDetail category = new CategoryDetail();
+            var data = _dbContext.Categories.Where(m => m.id == id).FirstOrDefault();
+            if (data != null)
+            {
+                category.id = data.id;
+                category.name = data.name;
+                category.description = data.description;
+                category.icon = data.icon;
+                category.status = data.status;
+            }
+
+            return View(category);
+        }
+
+        [HttpPost]
+        public IActionResult Update(CategoryDetail category, IFormFile file)
+        {
+            try
+            {
+
+                var data = _dbContext.Categories.Where(m => m.id == category.id).FirstOrDefault();
+                string uniqueIconAvatar = "";
+                if (category.Photo != null)
+                {
+                    uniqueIconAvatar = uniqueIconAvatar = UploadFile(category.Photo);
+                }
+
+                if (data != null)
+                {
+                    // gan lai du lieu trong db bang du lieu tu form model gui len
+                    data.name = category.name;
+                    data.description = category.description;
+                    data.status = category.status;
+                    if (!string.IsNullOrEmpty(uniqueIconAvatar))
+                    {
+                        data.icon = uniqueIconAvatar;
+                    }
+                    _dbContext.SaveChanges(true);
+                    TempData["UpdateStatus"] = true;
+                }
+                else
+                {
+                    TempData["UpdateStatus"] = false;
+                }
+            }
+            catch (Exception ex)
+            {
+                 TempData["UpdateStatus"] = false;
+            }
+            return RedirectToAction(nameof(CategoryController.Index), "Category");
+        }
+
+        [HttpGet]
+        public IActionResult Delete(int id = 0)
+        {
+            try
+            {
+                var data = _dbContext.Categories.Where(m => m.id == id).FirstOrDefault();
+                if (data != null)
+                {
+                    data.deleted_at = Convert.ToDateTime(DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss"));
+                    _dbContext.SaveChanges(true);
+                    TempData["DeleteStatus"] = true;
+                }
+                else
+                {
+                    TempData["DeleteStatus"] = false;
+                }
+            }
+            catch
+            {
+                TempData["DeleteStatus"] = false;
+            }
+            return RedirectToAction(nameof(CategoryController.Index), "Category");
         }
 
         private string UploadFile(IFormFile file)

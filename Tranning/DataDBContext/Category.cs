@@ -17,7 +17,7 @@ namespace Tranning.DataDBContext
         [Column("description", TypeName = "Varchar(100)"), AllowNull]
         public string? description { get; set; }
 
-        [Column("icon", TypeName = "Varchar(50)"), AllowNull]
+        [Column("icon", TypeName = "Varchar(200)"), AllowNull]
         public string? icon { get; set; }
 
         [Column("status", TypeName = "Varchar(50)"), Required]
