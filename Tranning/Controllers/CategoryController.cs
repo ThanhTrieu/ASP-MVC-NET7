@@ -33,7 +33,7 @@ namespace Tranning.Controllers
             data = data.Where(m => m.deleted_at == null);
             if (!string.IsNullOrEmpty(SearchString))
             {
-                data = data.Where(m => m.name.Contains(SearchString));
+                data = data.Where(m => m.name.Contains(SearchString) || m.description.Contains(SearchString));
             }
             data.ToList();
 
@@ -50,7 +50,7 @@ namespace Tranning.Controllers
                     updated_at = item.updated_at
                 });
             }
-
+            ViewData["CurrentFilter"] = SearchString;
             return View(categoryModel);
         }
 
