@@ -19,6 +19,17 @@
         </h3>
         <a class="btn btn-primary btn-sm" href="@Url.Action("Add","Category")"> Add Category </a>
 
+        <form asp-action="Index" method="get">
+            <div class="form-actions no-color">
+                <p class="mb-0">
+                    Find by name : <input type="text" name="SearchString" value="" />
+                    <button type="submit" class="btn btn-primary btn-sm mb-0">Search</button>
+                    <a asp-action="Index"> Back to full list</a>
+                </p>
+            </div>
+        </form>
+        <hr/>
+
         @if (TempData["UpdateStatus"] != null)
         {
             @if (statusUpdate)

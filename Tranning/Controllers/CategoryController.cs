@@ -14,26 +14,29 @@ namespace Tranning.Controllers
             _dbContext = context;
         }
 
-        private bool checkUserLogin()
-        {
-            if (string.IsNullOrEmpty(HttpContext.Session.GetString("SessionUsername")))
-            {
-                return false;
-            }
-            return true;
-        }
-
         [HttpGet]
-        public IActionResult Index()
+        public IActionResult Index(string SearchString)
         {
-            // check dang nhap
-            //if (!checkUserLogin())
+            
+            //check dang nhap
+            //if (string.IsNullOrEmpty(HttpContext.Session.GetString("SessionUsername")))
             //{
             //    return RedirectToAction(nameof(LoginController.Index), "Login");
             //}
+
             CategoryModel categoryModel = new CategoryModel();
             categoryModel.CategoryDetailLists = new List<CategoryDetail>();
-            var data = _dbContext.Categories.Where(m => m.deleted_at == null).ToList();
+
+            var data = from m in _dbContext.Categories
+                       select m;
+
+            data = data.Where(m => m.deleted_at == null);
+            if (!string.IsNullOrEmpty(SearchString))
+            {
+                data = data.Where(m => m.name.Contains(SearchString));
+            }
+            data.ToList();
+
             foreach (var item in data)
             {
                 categoryModel.CategoryDetailLists.Add(new CategoryDetail
@@ -55,7 +58,7 @@ namespace Tranning.Controllers
         public IActionResult Add()
         {
             // check dang nhap
-            //if (!checkUserLogin())
+            //if (string.IsNullOrEmpty(HttpContext.Session.GetString("SessionUsername")))
             //{
             //    return RedirectToAction(nameof(LoginController.Index), "Login");
             //}
