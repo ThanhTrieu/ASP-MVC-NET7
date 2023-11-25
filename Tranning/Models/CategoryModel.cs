@@ -24,9 +24,9 @@ namespace Tranning.Models
         [Required(ErrorMessage = "Choose Status, please")]
         public string status { get; set; }
 
-        //[Required(ErrorMessage = "Choose file, please")]
-        //[AllowedExtensionFile(new string[] { ".png",".jpg",".jpeg" })]
-        //[AllowedSizeFile(3*1024*1024)]
+        [Required(ErrorMessage = "Choose file, please")]
+        [AllowedExtensionFile(new string[] { ".png",".jpg",".jpeg" })]
+        [AllowedSizeFile(3*1024*1024)]
         public IFormFile? Photo { get; set; }
 
         public DateTime? created_at { get; set; }
