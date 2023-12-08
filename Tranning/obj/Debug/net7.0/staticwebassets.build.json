@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "kZlhpu7ayez8O1S/xGL1SkZzHAsKbXnCa3koWfsupls=",
+  "Hash": "Fg64G1Az9CpAmJGdhQ2C0m7Qe/wBrLa0ScV34iomLgw=",
   "Source": "Tranning",
   "BasePath": "_content/Tranning",
   "Mode": "Default",
@@ -5729,6 +5729,23 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt"
     },
     {
+      "Identity": "E:\\trieut6\\C#\\Tranning\\Tranning\\wwwroot\\uploads\\images\\0b1006c8-9135-4ed1-afcc-a89e13c90832-1620_1.jpg",
+      "SourceId": "Tranning",
+      "SourceType": "Discovered",
+      "ContentRoot": "E:\\trieut6\\C#\\Tranning\\Tranning\\wwwroot\\",
+      "BasePath": "_content/Tranning",
+      "RelativePath": "uploads/images/0b1006c8-9135-4ed1-afcc-a89e13c90832-1620_1.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\uploads\\images\\0b1006c8-9135-4ed1-afcc-a89e13c90832-1620_1.jpg"
+    },
+    {
       "Identity": "E:\\trieut6\\C#\\Tranning\\Tranning\\wwwroot\\uploads\\images\\146611e1-0331-456a-97ca-a76c0d38a081-8c56de959cd76b8932c6.jpg",
       "SourceId": "Tranning",
       "SourceType": "Discovered",
@@ -6001,6 +6018,23 @@
       "OriginalItemSpec": "wwwroot\\uploads\\images\\dbcb2899-1c8d-404a-86c4-630043d2a2d7-2_TZWI.png"
     },
     {
+      "Identity": "E:\\trieut6\\C#\\Tranning\\Tranning\\wwwroot\\uploads\\images\\de1c2a9d-43c3-4060-8b95-5ec07fbcea4e-91316705_2826932030767599_4384472391519043584_n.jpg",
+      "SourceId": "Tranning",
+      "SourceType": "Discovered",
+      "ContentRoot": "E:\\trieut6\\C#\\Tranning\\Tranning\\wwwroot\\",
+      "BasePath": "_content/Tranning",
+      "RelativePath": "uploads/images/de1c2a9d-43c3-4060-8b95-5ec07fbcea4e-91316705_2826932030767599_4384472391519043584_n.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\uploads\\images\\de1c2a9d-43c3-4060-8b95-5ec07fbcea4e-91316705_2826932030767599_4384472391519043584_n.jpg"
+    },
+    {
       "Identity": "E:\\trieut6\\C#\\Tranning\\Tranning\\wwwroot\\uploads\\images\\dfb82a6b-c7e1-4e17-963a-83d2ebfc3855-81587674_109538533910535_5605031401880551424_n.jpg",
       "SourceId": "Tranning",
       "SourceType": "Discovered",
@@ -6084,6 +6118,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\uploads\\images\\efce081c-0861-4bb3-ab3b-38f967e41551-1620_1.jpg"
+    },
+    {
+      "Identity": "E:\\trieut6\\C#\\Tranning\\Tranning\\wwwroot\\uploads\\images\\f63ce7be-931e-4032-ab68-c7ce443e5619-1620_1.jpg",
+      "SourceId": "Tranning",
+      "SourceType": "Discovered",
+      "ContentRoot": "E:\\trieut6\\C#\\Tranning\\Tranning\\wwwroot\\",
+      "BasePath": "_content/Tranning",
+      "RelativePath": "uploads/images/f63ce7be-931e-4032-ab68-c7ce443e5619-1620_1.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\uploads\\images\\f63ce7be-931e-4032-ab68-c7ce443e5619-1620_1.jpg"
     }
   ]
 }

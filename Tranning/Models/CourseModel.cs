@@ -28,7 +28,7 @@ namespace Tranning.Models
 
         public int? vote {  get; set; }
 
-        public string avatar { get; set; }
+        public string? avatar { get; set; }
 
         [Required(ErrorMessage = "Choose Status, please")]
         public string status { get; set; }
